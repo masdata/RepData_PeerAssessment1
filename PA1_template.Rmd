@@ -19,7 +19,6 @@ library(lattice)
 
 ```{r, echo=TRUE}
 PerDay <- aggregate(steps ~ date, activitydata, sum, na.rm = TRUE)
-print(PerDay)
 ```
 
 "2. If you do not understand the difference between a histogram and a barplot, research the difference between them. Make a histogram of the total number of steps taken each day."
