@@ -112,9 +112,9 @@ table(activitymodified$day)
 
 ```{r, echo=TRUE}
 PerIntervalModified <- aggregate(steps ~ interval + day, data = activitymodified, FUN="mean")
-xyplot(steps ~ interval | day, data=PerIntervalModified, type = "l", layout = c(1,2), grid = T, ylab = "Number of Steps")
+xyplot(steps ~ interval | day, data=PerIntervalModified, type="l", layout = c(1,2), grid = T, ylab = "Number of Steps")
 ```
 
-```{r}
+```{r, echo=TRUE}
 knit2html("PA1_template.html")
 ```
