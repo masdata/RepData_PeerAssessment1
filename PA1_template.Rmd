@@ -11,6 +11,7 @@ Read in the data set.
 ```{r, echo=TRUE}
 activitydata <- read.csv("activity.csv")
 library(lattice)
+library(knitr)
 ```
 
 ## What is mean total number of steps taken per day?
@@ -112,4 +113,8 @@ table(activitymodified$day)
 ```{r, echo=TRUE}
 PerIntervalModified <- aggregate(steps ~ interval + day, data = activitymodified, FUN="mean")
 xyplot(steps ~ interval | day, data=PerIntervalModified, type = "l", layout = c(1,2), grid = T, ylab = "Number of Steps")
+```
+
+```{r, echo=TRUE}
+knit2html("PA1_template.html")
 ```
